@@ -28,4 +28,5 @@ body {
 .cartaoComando:hover {
     background-color:#6495ED;
     scale: 105%;
+    transform: translateY(-2.5%);
 }
