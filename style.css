@@ -5,6 +5,27 @@
 
 body {
     font-family: monospace;
-    background-color: black;
-    color:aqua;
+    background-color: #fff;
+    color: #000000;
+}
+
+.grupoComandos {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 10px;
+    gap: 15px;
+}
+
+.cartaoComando {
+    width: calc(25% - 15px);
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 10px 5px;
+    transition: 50ms;
+    background-color: #A0C4FF ;
+}
+
+.cartaoComando:hover {
+    background-color:#6495ED;
+    scale: 105%;
 }
