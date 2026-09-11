@@ -11,14 +11,16 @@ body {
 
 .grupoComandos {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-inline: 10px;
-    gap: 15px;
+    gap: 10px;
 }
 
 .cartaoComando {
-    width: calc(25% - 15px);
-    border: 1px solid #fff;
+    width: calc(25% - 20px);
+    border: 1px solid #000000;
     border-radius: 20px;
     padding: 10px 5px;
     transition: 50ms;
@@ -29,4 +31,8 @@ body {
     background-color:#6495ED;
     scale: 105%;
     transform: translateY(-2.5%);
+}
+
+@media {
+
 }
