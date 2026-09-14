@@ -17,10 +17,11 @@ body {
     font-family: monospace;
     background-color: #000;
     color: #FFFF;
-    font-size: x-large;
+    font-size: large;
 }
 
 main {
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,52 +32,37 @@ main {
 
 .grupoComandos {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-inline: 10px;
+    gap: 10px;
     color: #ff0000;
 }
 
 .cartaoComando {
+    padding: 10px 10px;
     border: 1px solid #ff0000;
     border-radius: 20px;
     width: 85vw;
     height: 20vh;
 }
 
-@media screen and (min-width: 768px) {
-    .grupoComandos {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+.Icone {
+    fill: #ff0000;
+    stroke: white;
+    height: 40px;
+    width: 40px;
 
-    .cartaoComando {
-        border: 1px solid #ff0000;
-        border-radius: 20px;
-        width: calc(25% - 15px);
-        min-height: fit-content;
-    }
+}
 
-    .cartaoComando:hover {
-        background-color: #ff0000;
-        scale: 102%;
-        transform: translateY(-2.5%);
-        color: white;
-    }
-
-    .Footer {
-        display: flex;
-        padding: 10px 30px;
-        margin: 0 auto;
-        border-left: 4px solid #ff0000;
-        padding: 10px 15px;
-        border-radius: 4px;
-        max-width: 600px;
-    }
-
-    .Direitos {
-        margin: 50px 0px 50px 0px;
-
-    }
+.Footer {
+    display: flex;
+    padding: 10px 30px;
+    border-left: 4px solid #ff0000;
+    padding: 15px 20px;
+    border-radius: 4px;
+    max-width: 600px;
+    margin: 0 auto;
 
 }
 
@@ -91,4 +77,81 @@ footer div {
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .grupoComandos {
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cartaoComando {
+
+        width: calc(50% - 15px);
+    }
+
+    body {
+
+        background-color: #000000;
+        font-size: x-large;
+    }
+
+    .Direitos {
+
+        margin: 50px 0px 50px 0px;
+
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .cartaoComando {
+
+        min-width: calc(33% - 15px)
+    }
+
+    .Icone {
+
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    body {
+        font-size: xx-large;
+    }
+
+    .cartaoComando {
+        transition: 100ms;
+        min-width: calc(25% - 15px)
+    }
+
+    .cartaoComando:hover {
+        scale: 102%;
+    }
+
+    .Icone {
+
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .cartaoComando {
+
+        width: calc(25vw - 20px);
+    }
+
+    .Icone {
+
+        height: 70px;
+        width: 70px;
+    }
 }
