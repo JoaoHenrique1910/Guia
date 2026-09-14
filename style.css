@@ -1,12 +1,39 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: content-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+body {
+    font-family: monospace;
+    background-color: #000;
+    color: #FFFF;
+    font-size: x-large;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
 }
 
 .grupoComandos {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    color: #ff0000;
 }
 
 .cartaoComando {
@@ -28,35 +55,28 @@
         width: calc(25% - 15px);
         min-height: fit-content;
     }
-}
 
-body {
-    font-family: monospace;
-    background-color: #000;
-    color: #FFFF;
-    font-size: x-large;
-}
+    .cartaoComando:hover {
+        background-color: #ff0000;
+        scale: 102%;
+        transform: translateY(-2.5%);
+        color: white;
+    }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    font-family: 'Courier New', Courier, monospace;
+    .Footer {
+        display: flex;
+        padding: 10px 30px;
+        margin: 0 auto;
+        border-left: 4px solid #ff0000;
+        padding: 10px 15px;
+        border-radius: 4px;
+        max-width: 600px;
+    }
 
-}
+    .Direitos {
+        margin: 50px 0px 50px 0px;
 
-main {
-    display: flex;
-    flex-direction: column;
-    margin-block: auto;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-}
-
-footer {
+    }
 
 }
 
@@ -71,22 +91,4 @@ footer div {
     align-items: center;
     justify-content: center;
     gap: 20px;
-}
-
-.cartaoComando:hover {
-    background-color: #ff0000;
-    scale: 105%;
-    transform: translateY(-2.5%);
-    color: white;
-}
-
-.Footer {
-    display: flex;
-    padding: 10px 30px;
-    border-left: 4px solid #ff0000;
-    padding: 15px 20px;
-    border-radius: 4px;
-    max-width: 600px;
-    margin: 0 auto;
-
 }
