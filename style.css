@@ -1,13 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-}
-
-body {
-    font-family: monospace;
-    background-color: #000;
-    color: #FFFF;
-    font-size: x-large;
+    box-sizing: border-box;
 }
 
 header {
@@ -17,74 +11,193 @@ header {
     align-items: center;
     margin-top: 50px;
     font-family: 'Courier New', Courier, monospace;
+
+}
+
+body {
+    font-family: monospace;
+    background-color: #000;
+    color: #FFFF;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
-    height: 85vh;
     display: flex;
     flex-direction: column;
-    margin-block: auto;
     align-items: center;
     justify-content: center;
     gap: 20px;
 
-}
-
-footer {
-    height: 10vh;
 }
 
 .grupoComandos {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-inline: 10px;
-    gap: 10px;
+    margin-inline: 100px;
+    color: #ff0000;
+    gap: 20px;
 }
 
 .cartaoComando {
-    width: calc(25% - 20px);
+    padding: 10px 10px;
     border: 1px solid #ff0000;
     border-radius: 20px;
-    padding: 10px 5px;
-    transition: 50ms;
-    background-color: #000;
-    color: #ff0000;
+    width: 85vw;
+    height: 20vh;
 }
 
-.cartaoComando:hover {
-    background-color: #ff0000;
-    scale: 105%;
-    transform: translateY(-2.5%);
-    color: white;
+.Icone {
+    fill: #ff0000;
+    stroke: white;
+    height: 40px;
+    width: 40px;
+
 }
 
 .Footer {
-    display: flex;
-    padding: 10px 30px;
+    padding: 100px 30px;
     border-left: 4px solid #ff0000;
-    padding: 15px 20px;
+    padding: 5px 5px;
     border-radius: 4px;
     max-width: 600px;
-    margin: 0 auto;
 
 }
 
 .Direitos {
 
-    margin: 50px 0px 50px 0px;
+    margin: 25px 0px 20px 0px;
 }
 
-footer hr {
+hr {
     margin: 20px 0 20px 0;
 }
 
-footer div {
+footer {
+    height: 5vh;
     display: flex;
     flex-direction: column;
-    margin-block: auto;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .grupoComandos {
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 15px;
+
+    }
+
+    .cartaoComando {
+
+        min-width: calc(50% - 10px);
+        width: 30vw;
+        height: auto;
+
+    }
+
+    body {
+
+        background-color: #000000;
+        font-size: x-large;
+    }
+
+    .Footer {
+
+        display: flex;
+        padding: 10px 30px;
+        border-left: 4px solid #ff0000;
+        padding: 5px 15px;
+        border-radius: 4px;
+
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .cartaoComando {
+
+        min-width: calc(50% - 15px)
+    }
+
+    .Icone {
+
+        height: 40px;
+        width: 40px;
+    }
+
+    body {
+
+        background-color: #000000;
+        font-size: x-large;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    body {
+        background-color: #000000;
+        font-size: xx-large;
+    }
+
+    .grupoComandos {
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        height: auto;
+        padding: 0px 35px 0px 35px;
+    }
+
+    .cartaoComando {
+        transition: 100ms;
+        min-width: calc(50% - 15px);
+        width: 100%;
+        height: auto;
+    }
+
+    .cartaoComando:hover {
+        background-color: #ff0000;
+        scale: 105%;
+        transform: translateY(-1%);
+        color: white;
+    }
+
+    .Footer {
+        max-width: 600px;
+    }
+
+    .Icone {
+
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .cartaoComando {
+
+        transition: 100ms;
+        min-width: calc(50% - 15px);
+        width: 100%;
+        height: auto;
+    }
+
+    .Icone {
+
+        height: 60px;
+        width: 60px;
+    }
+
+    body {
+        background-color: #000000;
+        font-size: xx-large;
+    }
 }
