@@ -5,13 +5,12 @@
 }
 
 header {
-    height: 5vh;
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
     font-family: 'Courier New', Courier, monospace;
-
 }
 
 body {
@@ -19,8 +18,6 @@ body {
     background-color: #000;
     color: #FFFF;
     font-size: large;
-    align-items: center;
-    justify-content: center;
 }
 
 main {
@@ -29,24 +26,24 @@ main {
     align-items: center;
     justify-content: center;
     gap: 20px;
-
 }
 
 .grupoComandos {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-inline: 100px;
+    justify-content: center;
+    margin-inline: 20px;
     color: #ff0000;
     gap: 20px;
 }
 
 .cartaoComando {
-    padding: 10px 10px;
+    padding: 15px;
     border: 1px solid #ff0000;
     border-radius: 20px;
-    width: 85vw;
-    height: 20vh;
+    width: 100%;
+    height: auto;/
 }
 
 .Icone {
@@ -54,20 +51,18 @@ main {
     stroke: white;
     height: 40px;
     width: 40px;
-
+    margin-top: 10px;
 }
 
 .Footer {
-    padding: 100px 30px;
+    padding: 20px 30px;
     border-left: 4px solid #ff0000;
-    padding: 5px 5px;
     border-radius: 4px;
-    max-width: 600px;
-
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .Direitos {
-
     margin: 25px 0px 20px 0px;
 }
 
@@ -76,91 +71,55 @@ hr {
 }
 
 footer {
-    height: 5vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 @media only screen and (min-width: 600px) {
-
     .grupoComandos {
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 15px;
-
+        margin-inline: 40px;
     }
 
     .cartaoComando {
-
-        min-width: calc(50% - 10px);
-        width: 30vw;
-        height: auto;
-
+        width: calc(50% - 10px);
     }
 
     body {
-
-        background-color: #000000;
         font-size: x-large;
     }
 
     .Footer {
-
         display: flex;
         padding: 10px 30px;
-        border-left: 4px solid #ff0000;
-        padding: 5px 15px;
-        border-radius: 4px;
-
     }
 }
 
 @media only screen and (min-width: 768px) {
-
     .cartaoComando {
-
-        min-width: calc(50% - 15px)
-    }
-
-    .Icone {
-
-        height: 40px;
-        width: 40px;
-    }
-
-    body {
-
-        background-color: #000000;
-        font-size: x-large;
+        width: calc(50% - 15px);
     }
 }
 
-@media only screen and (min-width: 992px) {
 
+@media only screen and (min-width: 992px) {
     body {
-        background-color: #000000;
         font-size: xx-large;
     }
 
     .grupoComandos {
-
+        margin-inline: 100px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        width: 100%;
-        height: auto;
-        padding: 0px 35px 0px 35px;
+        padding: 0;
     }
 
     .cartaoComando {
-        transition: 100ms;
-        min-width: calc(50% - 15px);
         width: 100%;
-        height: auto;
+        transition: 100ms;
     }
 
     .cartaoComando:hover {
@@ -170,12 +129,7 @@ footer {
         color: white;
     }
 
-    .Footer {
-        max-width: 600px;
-    }
-
     .Icone {
-
         height: 60px;
         width: 60px;
     }
@@ -183,21 +137,6 @@ footer {
 
 @media only screen and (min-width: 1200px) {
     .cartaoComando {
-
         transition: 100ms;
-        min-width: calc(50% - 15px);
-        width: 100%;
-        height: auto;
-    }
-
-    .Icone {
-
-        height: 60px;
-        width: 60px;
-    }
-
-    body {
-        background-color: #000000;
-        font-size: xx-large;
     }
 }
