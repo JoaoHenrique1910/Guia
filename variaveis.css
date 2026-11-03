@@ -1,0 +1,14 @@
+:root {
+    --fundo-principal: #05070b;
+    --fundo-secundario: #0d1117;
+    --fundo-cartao: #111622;
+    --borda-card: #21262d;
+    --borda-foco: #ff3333;
+    
+    --cor-texto: #c9d1d9;
+    --cor-titulo: #ff3333;
+    --cor-comando: #00ff66;
+    
+    --sombra-padrao: 0 4px 20px rgba(0, 0, 0, 0.5);
+    --sombra-hover: 0 8px 30px rgba(255, 51, 51, 0.25);
+}

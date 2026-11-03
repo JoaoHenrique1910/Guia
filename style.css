@@ -1,142 +1,213 @@
+@import url('variaveis.css');
+
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--fundo-principal);
+    color: var(--cor-texto);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
 header {
-    padding: 10px 0;
+    padding: 50px 20px 30px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
-    font-family: 'Courier New', Courier, monospace;
+    gap: 20px;
+    background-color: var(--fundo-secundario);
+    border-bottom: 2px solid var(--borda-foco);
+    box-shadow: var(--sombra-padrao);
 }
 
-body {
-    font-family: monospace;
-    background-color: #000;
-    color: #FFFF;
-    font-size: large;
+header h1 {
+    color: var(--cor-titulo);
+    text-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.busca-container {
+    width: 100%;
+    max-width: 650px;
+}
+
+#buscaInput {
+    width: 100%;
+    padding: 14px 22px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--fundo-principal);
+    border: 1px solid var(--borda-card);
+    color: #fff;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#buscaInput:focus {
+    border-color: var(--borda-foco);
+    box-shadow: 0 0 20px rgba(255, 51, 51, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    padding: 50px 20px;
+    gap: 50px;
+}
+
+h2 {
+    color: var(--cor-titulo);
+    width: 100%;
+    max-width: 1200px;
+    border-left: 5px solid var(--borda-foco);
+    padding-left: 15px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .grupoComandos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-inline: 20px;
-    color: #ff0000;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .cartaoComando {
-    padding: 15px;
-    border: 1px solid #ff0000;
-    border-radius: 20px;
-    width: 100%;
-    height: auto;/
+    background-color: var(--fundo-cartao);
+    border: 1px solid var(--borda-card);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--sombra-padrao);
 }
 
-.Icone {
-    fill: #ff0000;
-    stroke: white;
-    height: 40px;
-    width: 40px;
-    margin-top: 10px;
+.cartaoComando:hover {
+    transform: translateY(-6px);
+    border-color: var(--borda-foco);
+    box-shadow: var(--sombra-hover);
 }
 
-.Footer {
-    padding: 20px 30px;
-    border-left: 4px solid #ff0000;
-    border-radius: 4px;
-    max-width: 90%;
-    margin: 0 auto;
+.cartaoHeader {
+    background-color: var(--fundo-secundario);
+    padding: 12px 18px;
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid var(--borda-card);
 }
 
-.Direitos {
-    margin: 25px 0px 20px 0px;
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+}
+
+.cartaoHeader .dot:nth-child(1) { background-color: #ff5f56; }
+.cartaoHeader .dot:nth-child(2) { background-color: #ffbd2e; }
+.cartaoHeader .dot:nth-child(3) { background-color: #27c93f; }
+
+.cartaoConteudo {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.comandoTexto {
+    color: var(--cor-comando);
+    font-size: 1.05rem;
+    word-break: break-all;
+    font-weight: bold;
+}
+
+.cartaoConteudo p {
+    color: #8b949e;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.btnCopiar {
+    background-color: transparent;
+    color: var(--borda-foco);
+    border: 1px solid var(--borda-foco);
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    transition: all 0.25s ease;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-top: auto;
+}
+
+.btnCopiar:hover {
+    background-color: var(--borda-foco);
+    color: var(--fundo-principal);
+    box-shadow: 0 0 12px rgba(255, 51, 51, 0.4);
 }
 
 hr {
-    margin: 20px 0 20px 0;
+    border: none;
+    border-top: 1px solid var(--borda-card);
+    margin: 0 20px;
 }
 
 footer {
-    height: auto;
+    padding: 50px 20px;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 20px;
+    gap: 20px;
+    background-color: var(--fundo-secundario);
+    border-top: 1px solid var(--borda-card);
+}
+
+.Footer {
+    background-color: var(--fundo-principal);
+    padding: 15px 25px;
+    border-left: 4px solid var(--borda-foco);
+    border-radius: 6px;
+    display: inline-block;
+    margin: 0 auto;
+    box-shadow: var(--sombra-padrao);
+}
+
+.Direitos {
+    color: #6e7681;
+    font-size: 0.9rem;
 }
 
 @media only screen and (min-width: 600px) {
     .grupoComandos {
-        margin-inline: 40px;
-    }
-
-    .cartaoComando {
-        width: calc(50% - 10px);
-    }
-
-    body {
-        font-size: x-large;
-    }
-
-    .Footer {
-        display: flex;
-        padding: 10px 30px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-
-@media only screen and (min-width: 768px) {
-    .cartaoComando {
-        width: calc(50% - 15px);
-    }
-}
-
 
 @media only screen and (min-width: 992px) {
-    body {
-        font-size: xx-large;
-    }
-
     .grupoComandos {
-        margin-inline: 100px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        padding: 0;
-    }
-
-    .cartaoComando {
-        width: 100%;
-        transition: 100ms;
-    }
-
-    .cartaoComando:hover {
-        background-color: #ff0000;
-        scale: 105%;
-        transform: translateY(-1%);
-        color: white;
-    }
-
-    .Icone {
-        height: 60px;
-        width: 60px;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media only screen and (min-width: 1200px) {
-    .cartaoComando {
-        transition: 100ms;
+    .grupoComandos {
+        grid-template-columns: repeat(4, 1fr);
     }
 }

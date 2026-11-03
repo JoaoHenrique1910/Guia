@@ -1,87 +1,172 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-   <link rel="stylesheet" href="style.css">
-   <title>Guia de Bolso Git</title>
-   <link rel="icon type="image href="assets/logo.jpg">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Bolso Git</title>
+    <link rel="stylesheet" href="variaveis.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/logo.jpg">
 </head>
-
 <body>
-   <header>
-      <h1>Guia de Bolso</h1>
-   </header>
-   <main>
-      <h2>Comandos Essenciais</h2>
-      <section class="grupoComandos">
-         <div class="cartaoComando">
-            <h3>git init</h3>
-            <p>Cria um novo repositório Git</p>
-            <svg class="Icone">
-               <use href="assets/c1.svg"></use>
-            </svg>
-         </div>
-         <div class="cartaoComando">
-            <h3>git add .</h3>
-            <p>Salva todas as alterações</p>
-            <svg class="Icone">
-               <use href="assets/c2.svg"></use>
-            </svg>
-         </div>
-         <div class="cartaoComando">
-            <h3>git commit -m "[Mensagem de Commit]"</h3>
-            <p>Salva minhas alterações no histórico local</p>
-            <svg class="Icone">
-               <use href="assets/c3.svg"></use>
-            </svg>
-         </div>
-         <div class="cartaoComando">
-            <h3>git push -u origin main</h3>
-            <p>Envia os meus commits locais para o repositório remoto</p>
-            <svg class="Icone">
-               <use href="assets/c4.svg"></use>
-            </svg>
-         </div>
-         <div class="cartaoComando">
-            <h3>git fetch</h3>
-            <p>Verifica se o reporitório remoto tem modificações em relação ao local</p>
-            <svg class="Icone">
-               <use href="assets/c5.svg"></use>
-            </svg>
-         </div>
-         <div class="cartaoComando">
-            <h3>git pull</h3>
-            <p>Puxa as alterações feitas no reporitório remoto para o local</p>
-            <svg class="Icone">
-               <use href="assets/c6.svg"></use>
-            </svg>
-         </div>
-         <div class="cartaoComando">
-            <h3>git clone [link do reporitório]</h3>
-            <p>Cria uma cópia local de um reporitório remoto</p>
-            <svg class="Icone">
-               <use href="assets/c7.svg"></use>
-            </svg>
-         </div>
-         <div class="cartaoComando">
-            <h3>git remote add origin [link do repositório]</h3>
-            <p>Conecta o repositório local ao reporitório remoto</p>
-            <svg class="Icone">
-               <use href="assets/c8.svg"></use>
-            </svg>
-         </div>
-      </section>
-   </main>
-   <hr>
+    <header>
+        <h1>Guia de Bolso Git</h1>
+        <div class="busca-container">
+            <input type="text" id="buscaInput" placeholder="Buscar comando...">
+        </div>
+    </header>
 
-   <footer>
-      <div class="Footer">
-         <p>Dica: Lembre-se de sempre dar Ctrl + S antes de fechar o projeto</p>
-      </div>
-      <div class="Direitos">
-         <p>© João Henrique. Todos os Direitos Reservados.</p>
-      </div>
-   </footer>
+    <main>
+        <h2>Comandos Essenciais</h2>
+        <section class="grupoComandos">
+            <div class="cartaoComando">
+                <div class="cartaoHeader">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="cartaoConteudo">
+                    <h3 class="comandoTexto">git init</h3>
+                    <p>Cria um novo repositório Git local</p>
+                    <button class="btnCopiar">Copiar</button>
+                </div>
+            </div>
+
+            <div class="cartaoComando">
+                <div class="cartaoHeader">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="cartaoConteudo">
+                    <h3 class="comandoTexto">git add .</h3>
+                    <p>Salva todas as alterações para o próximo commit</p>
+                    <button class="btnCopiar">Copiar</button>
+                </div>
+            </div>
+
+            <div class="cartaoComando">
+                <div class="cartaoHeader">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="cartaoConteudo">
+                    <h3 class="comandoTexto">git commit -m "Mensagem"</h3>
+                    <p>Salva as alterações no histórico local</p>
+                    <button class="btnCopiar">Copiar</button>
+                </div>
+            </div>
+
+            <div class="cartaoComando">
+                <div class="cartaoHeader">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="cartaoConteudo">
+                    <h3 class="comandoTexto">git push -u origin main</h3>
+                    <p>Envia os commits para o repositório remoto</p>
+                    <button class="btnCopiar">Copiar</button>
+                </div>
+            </div>
+
+            <div class="cartaoComando">
+                <div class="cartaoHeader">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="cartaoConteudo">
+                    <h3 class="comandoTexto">git fetch</h3>
+                    <p>Verifica modificações no repositório remoto</p>
+                    <button class="btnCopiar">Copiar</button>
+                </div>
+            </div>
+
+            <div class="cartaoComando">
+                <div class="cartaoHeader">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="cartaoConteudo">
+                    <h3 class="comandoTexto">git pull</h3>
+                    <p>Puxa as alterações do repositório remoto para o local</p>
+                    <button class="btnCopiar">Copiar</button>
+                </div>
+            </div>
+
+            <div class="cartaoComando">
+                <div class="cartaoHeader">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="cartaoConteudo">
+                    <h3 class="comandoTexto">git clone [link]</h3>
+                    <p>Cria uma cópia local de um repositório remoto</p>
+                    <button class="btnCopiar">Copiar</button>
+                </div>
+            </div>
+
+            <div class="cartaoComando">
+                <div class="cartaoHeader">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="cartaoConteudo">
+                    <h3 class="comandoTexto">git remote add origin [link]</h3>
+                    <p>Conecta o repositório local ao repositório remoto</p>
+                    <button class="btnCopiar">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <h2>Git Security (Cibersegurança)</h2>
+        <section class="grupoComandos">
+            <div class="cartaoComando">
+                <div class="cartaoHeader">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="cartaoConteudo">
+                    <h3 class="comandoTexto">git config commit.gpgsign true</h3>
+                    <p>Força a assinatura criptográfica GPG em todos os commits</p>
+                    <button class="btnCopiar">Copiar</button>
+                </div>
+            </div>
+
+            <div class="cartaoComando">
+                <div class="cartaoHeader">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="cartaoConteudo">
+                    <h3 class="comandoTexto">git rm --cached [arquivo]</h3>
+                    <p>Remove arquivos rastreados (como chaves vazadas) sem apagar localmente</p>
+                    <button class="btnCopiar">Copiar</button>
+                </div>
+            </div>
+
+            <div class="cartaoComando">
+                <div class="cartaoHeader">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="cartaoConteudo">
+                    <h3 class="comandoTexto">git log -p | grep "senha"</h3>
+                    <p>Audita o histórico de commits buscando por senhas vazadas</p>
+                    <button class="btnCopiar">Copiar</button>
+                </div>
+            </div>
+
+            <div class="cartaoComando">
+                <div class="cartaoHeader">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="cartaoConteudo">
+                    <h3 class="comandoTexto">git rev-parse --verify HEAD</h3>
+                    <p>Verifica a integridade e validação do commit atual</p>
+                    <button class="btnCopiar">Copiar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <div class="Footer">
+            <p>Dica: Lembre-se de sempre dar Ctrl + S antes de fechar o projeto</p>
+        </div>
+        <div class="Direitos">
+            <p>© João Henrique. Todos os Direitos Reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
